@@ -30,7 +30,7 @@ export default {
             this.suggestions = this.$store.getters.getQuery(this.query)
         },
         selectSuggestion(title) {
-            console.log(title)
+            //console.log(title)
             this.query = title
             this.submitQuery()
         }

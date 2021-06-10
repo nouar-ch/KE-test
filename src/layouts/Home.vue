@@ -45,7 +45,7 @@ export default {
             if (this.v$.$error) {
                 return
             }
-            console.log(this.v$)
+            //console.log(this.v$)
             axios.post(
                 "http://pb-backend-lb-30e3b7a2fe04ab9c.elb.eu-west-3.amazonaws.com/v1/authenticate/login",
                 {
@@ -56,11 +56,11 @@ export default {
                     headers
                 }
             ).then((res) => {
-                console.log(res)
+                //console.log(res)
                 if (!res.data || !res.data.success) return
                 localStorage.setItem("accessToken", res.data.data.accessToken)
                 localStorage.setItem("refreshToken", res.data.data.refreshToken)
-                console.log(localStorage.getItem("accessToken"))
+                //console.log(localStorage.getItem("accessToken"))
                 this.$router.push({name: "Search"})
             }).catch(rej => {
                 console.log(rej)

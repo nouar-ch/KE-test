@@ -11,9 +11,7 @@
 
 <script>
 import NewsList from '../components/NewsList.vue'
-//import axios from 'axios';
 import SearchInput from '../components/SearchInput.vue';
-//import {mapGetters} from 'vuex'
 
 export default {
     components: { NewsList, SearchInput },
@@ -30,14 +28,8 @@ export default {
         }
     },
     mounted() {
-        // axios.get(
-        //     "https://raw.githubusercontent.com/shandhiviyarajan/covid-19-sl-data/master/covid-news.json"
-        // ).then(res => {
-        //     console.log(res)
-        //     this.news = res.data
-        // })
         this.$store.dispatch("requestNews")
-        console.log(this.news)
+        //console.log(this.news)
     },
     methods: {
         search(query) {
